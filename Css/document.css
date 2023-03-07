@@ -38,26 +38,27 @@ html{
     position: fixed;
     top: 70px;
 }
-.left-main ul li{
+.left-main .left-sibar li{
     font-size: 1.2rem;
     font-weight: 500;
     padding: 1rem 1rem 1rem 1rem;
     cursor: pointer;
 }
-.left-main ul li.sibar-li_active>a>i{
-    rotate: -90deg ;
-}
-
-
-ul.sub-menu>li:hover{
+.left-main .left-sibar li:hover>a{
     color: #2de5be;
 }
-ul.sub-menu_active{
+/* .left-main .left-sibar>li.active a>i{
+    rotate: -90deg;
+} */
+.sub-menu>li:hover{
+    color: #2de5be;
+}
+/* .sub-menu{
+    display: none;
+} */
+/* .sub-menu.active {
     display: block;
-}
-ul.sub-menu.active{
-    color: #2de5be;
-}
+} */
 .right-main{
     display: none !important;
     padding-top: 3rem !important;
