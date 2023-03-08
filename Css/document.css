@@ -36,7 +36,7 @@ html{
 }
 .left-main .left-sibar{
     position: fixed;
-    top: 70px;
+    top: 9rem;
 }
 .left-main .left-sibar li{
     font-size: 1.2rem;
@@ -47,18 +47,24 @@ html{
 .left-main .left-sibar li:hover>a{
     color: #2de5be;
 }
-/* .left-main .left-sibar>li.active a>i{
+.left-main .left-sibar .li-active a{
+    color: #2de5be;
+}
+.left-main .left-sibar .li-active a i{
     rotate: -90deg;
-} */
+}
+.sub-menu{
+    display: none;
+} 
 .sub-menu>li:hover{
     color: #2de5be;
 }
-/* .sub-menu{
-    display: none;
-} */
-/* .sub-menu.active {
+.sub-menu-active{
     display: block;
-} */
+}
+.sub-menu li.active{
+    color: #2de5be;
+}
 .right-main{
     display: none !important;
     padding-top: 3rem !important;
@@ -86,7 +92,7 @@ html{
 }
 .right-tableOfContent{
     position: fixed;
-    top: 7rem;
+    top: 9rem;
 }
 .right-tableOfContent ul li{
     font-size: 1.2rem;
