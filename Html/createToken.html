@@ -12,15 +12,25 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
     <title>Create Token Native</title>
+    <script>
+        function showTokenForm() {
+        document.getElementById("token-form").style.display = "block";
+    }
+
+        function hideTokenForm() {
+        document.getElementById("token-form").style.display = "none";
+    }
+    </script>
 </head>
 <body>
     <header>
         <div class="logo">
-            <a href="../Html/index.html"><img src="../image/logoNFT.jpg" alt=""></a>
+            <a href="../Html/index.html"><img src="../image/logoNFTnew.jpg" alt=""></a>
         </div>
         <div class="nav">
             <ul class="navbar-menu">
                 <li><a href="#">Trang chủ</a></li>
+                <li><a href="createToken.html">Đúc tài sản</a></li>
                 <li><a href="./document.html">Tài liệu</a></li>
                 <li><a href="https://www.cardanocube.io/cardano-ecosystem-interactive-map">Cardano</a></li>
                 <li><a href="">Wallet</a>
@@ -30,71 +40,63 @@
         <div id="menu-btn" class="fas fa-bars"></div>
     </header>
     <div class="header-container-content">
-        <h1>Create your new token</h1>
-        <p>Please enter the information about your new token.</p>
-        <p>We strongly advise you to read the official documentation about the purposes and definition of Cardano Native Token</p>
+        <h1>Đúc Tài Sản</h1>
+        <p>Nếu bạn muốn đúc tài sản hãy chọn loại tài sản cần đúc và điền thông tin tài sản cần đúc</p>
     </div>
     <div class="form-collection col-lg-4 col-md-6 col-sm-8 col-8">
         <form action="">
             <div class="form-one-collection">
-                <div class="check-value">Require</div>
+                <div class="check-value">Yêu cầu nhập thông tin</div>
                 <span class="check-value-ria"></span>
-                <label>Token Symbol</label>
+                <label>Tên tài sản</label>
+                <span><i class="fa-solid fa-circle-plus"></i>
+                    <div class="notice">Tên này là một phần mô tả cho trường thông tin của tài sản đúc</div> 
+                </span>
+                <input type="text" class="collection-input" placeholder="Tên tài sản">
+            </div>
+            <div class="form-one-collection">
+                <div class="check-value">Yêu cầu nhập thông tin</div>
+                <span class="check-value-ria"></span>
+                <label>Mô tả</label>
+                <span><i class="fa-solid fa-circle-plus"></i>
+                    <div class="notice">Một phần mô tả tài sản đúc của bạn</div> 
+                </span>
+                <input type="text" class="collection-input" placeholder="Mô tả tài sản đúc">
+            </div>
+            <input  checked="checked" type="radio" name="token-type" value="token" onclick="showTokenForm()"> Token
+            <input type="radio" name="token-type" value="nft" onclick="hideTokenForm()"> NFT
+            <div class="form-one-collection" id="token-form">
+                <div class="check-value">Yêu cầu nhập thông tin</div>
+                <span class="check-value-ria"></span>
+                <label>Số lượng token</label>
                 <span><i class="fa-solid fa-circle-plus"></i>
                     <div class="notice">The symbol of your token (part of the final asset ID)</div> 
                 </span>
-                <input type="text" class="collection-input" placeholder="Token Symbol">
+                <input type="numbe class="class="collection-input" placeholder="Số lượng token muốn đúc">
             </div>
             <div class="form-one-collection">
-                <div class="check-value">Require</div>
-                <span class="check-value-ria"></span>
-                <label>Name of your Token</label>
-                <span><i class="fa-solid fa-circle-plus"></i>
-                    <div class="notice">This will part of the metadata sent along with your token</div> 
-                </span>
-                <input type="text" class="collection-input" placeholder="Token name">
-            </div>
-            <div class="form-one-collection">
-                <div class="check-value">Require</div>
-                <span class="check-value-ria"></span>
-                <label>Description</label>
-                <span><i class="fa-solid fa-circle-plus"></i>
-                    <div class="notice">This will part of the metadata sent along with your token</div> 
-                </span>
-                <input type="text" class="collection-input" placeholder="A Description for your Currency">
-            </div>
-            <div class="form-one-collection">
-                <div class="check-value">Require</div>
-                <span class="check-value-ria"></span>
-                <label>Amount to create</label>
-                <span><i class="fa-solid fa-circle-plus"></i>
-                    <div class="notice">The symbol of your token (part of the final asset ID)</div> 
-                </span>
-                <input type="numbe class="class="collection-input" placeholder="Number of Token you want to create">
-            </div>
-            <div class="form-one-collection">
-                <div class="check-value">Require</div>
-                <label>Logo(Visible on pool.pm)</label>
+                <div class="check-value">Yêu cầu nhập thông tin</div>
+                <label>Logo(Logo cho tài sản đúc)</label>
                 <span class="check-value-ria"></span>
                 <span>
                     <i class="fa-solid fa-circle-plus"></i>
-                    <div class="notice">It will be store on IPFS</div> 
+                    <div class="notice">Tài sản sẽ được lưu trữ trên IPFS</div> 
                 </span>
                 <input type="file" id="input-file" class="collection-input"  class="file" multiple placeholder="file you want to create">
                 <div id="image-container"></div>
             </div>
 
-            <div class="button-add-some-decription" onclick="Add()">ADD some inform for Token <i class="fa-solid fa-circle-plus"></i></div>
-            <div class="root"></div>
+            <!-- <div class="button-add-some-decription" onclick="Add()">ADD some inform for Token <i class="fa-solid fa-circle-plus"></i></div>
+            <div class="root"></div> -->
             <div class="btn-submit">Create</div>
         </form>
     </div>
 
     <footer>
         <div class="row">
-            <div class="footer-contact col-lg-4 col-md-4 col-sm-12 row">
+            <div class="footer-contact col-lg-3 col-md-4 col-sm-12 row">
                 <div class="logo">
-                    <a href="../Html/index.html"><img src="../image/logoNFT.jpg" alt=""></a>
+                    <a href="#"><img src="../image/logoNFTnew.jpg" alt=""></a>
                 </div>
                 <div class="contact">
                     <a href=""><i class="fa-brands fa-square-facebook"></i></i></a>
@@ -103,25 +105,16 @@
                     <a href=""><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="footer-plaform col-lg-8 col-md-8 col-sm-12 row">
-                <div class="footer-plaform-list col-lg-3 col-md-6 col-sm-6">Tài liệu
+            <div class="footer-plaform col-lg-9 col-md-8 col-sm-12 row">
+                <div class="footer-plaform-list col-lg-4 col-md-6 col-sm-6">Tài liệu
                     <a href="">Blockchain</a>
                     <a href="">SmartContract</a>
-                    <a href="">Resource</a>
                 </div>
-                <div class="footer-plaform-list col-lg-3 col-md-6 col-sm-6">Tài liệu
-                    <a href="">Blockchain</a>
-                    <a href="">SmartContract</a>
-                    <a href="">Resource</a>
-                </div><div class="footer-plaform-list col-lg-3 col-md-6 col-sm-6">Tài liệu
-                    <a href="">Blockchain</a>
-                    <a href="">SmartContract</a>
-                    <a href="">Resource</a>
-                </div><div class="footer-plaform-list col-lg-3 col-md-6 col-sm-6">Tài liệu
-                    <a href="">Blockchain</a>
-                    <a href="">SmartContract</a>
-                    <a href="">Resource</a>
-                </div>
+                <div class="footer-plaform-list col-lg-4 col-md-6 col-sm-6">Tài liệu
+                    <a href="">Kiến thức về NFT</a>
+                    <a href="">Kiến Thức vè token</a>
+                </div><div class="footer-plaform-list col-lg-4 col-md-6 col-sm-6">Tài liệu
+                    <a href="">Soursce Code</a>
                 
             </div>
         </div>
