@@ -104,11 +104,21 @@ html{
 }
 .right-tableOfContent ul>li:hover{
     color: #2de5be;
-    transition: none;
 }
 
 @media (max-width:992px) {
     .left-main{
-        display: none !important ;
+        display: none ; 
+    }
+    .left-main.active{
+        position: relative;
+    }
+    .left-main ul.left-sibar{
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+    }
+    .right-tableOfContent{
+        display: none;
     }
 }

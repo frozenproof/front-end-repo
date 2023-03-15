@@ -24,6 +24,73 @@
 html{
     font-size: 62.5%;
 }
+/*
+header
+*/
+header{
+    z-index: 1000000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 7rem;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0.5rem 0.5rem 0.5rem var(--color-shadow-);
+    background-color: var(--white-color-);
+
+}
+header a:hover{
+    text-decoration: none;
+}
+header .logo{
+    height: 100%;
+    margin: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .logo a{
+    height: 70%;
+    color: var(--main-color);
+    font-weight: 500;
+}
+header .logo img{
+    
+    height: 100%;
+}
+header .nav{
+    z-index: 1000;
+    margin: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .nav ul{
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+header .nav ul li{
+    list-style-type: none;
+}
+header .nav ul li a{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--main-color);
+    display: block;
+    padding: 1rem 2rem;
+}
+header .nav ul li a:hover{
+    background-color:var(--nav-a-hover-);
+    border-radius: var(--border-radius);
+}
+header #menu-btn{
+    margin-right: 3rem;
+    display: none;
+    font-size: 3rem;
+}
+
 .header-container-content{
     margin-top: 5rem;
     text-align: center;
@@ -143,3 +210,129 @@ span.check-value-ria{
 .btn-submit:hover{
     background-color: rgba(66, 231, 101, 0.8); 
 }
+/*footer*/
+footer{
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: 0;
+    box-shadow: 0.5rem 0 0.5rem 0.5rem var(--color-shadow-);
+}
+footer .footer-contact{
+    margin: 2rem 0 0 0rem;
+    flex-direction: column;
+}
+footer .footer-contact .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 0 0rem ;
+    height: 9rem;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--main-color);
+}
+footer .footer-contact .logo a{
+    display: block;
+    height: 100%;
+    color: var(--main-color);
+}
+footer .footer-contact a:hover{
+    text-decoration: none;
+}
+footer .footer-contact .logo img{
+    padding: 0.5rem;
+    height: 100%;
+}
+footer .footer-contact .contact{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 2rem 0rem;
+    gap: 3rem;
+}
+footer .footer-contact .contact a{
+    color: var(--main-color) !important;
+    display: block;
+    margin-top: 2rem;
+}
+footer .footer-contact .contact a:hover{
+    opacity: 0.6;
+}
+footer .footer-contact .contact a i{
+    font-size: 3rem;
+}
+footer .footer-plaform{
+    translate: 2.5rem;
+    margin-top:4rem ;
+    font-size: 2rem;
+    font-weight: 500;
+}
+footer .footer-plaform .footer-plaform-list a{
+    
+    display: block;
+    color: var(--main-color);
+    padding: 0.5rem 0;
+    font-size: 1.4rem;
+}
+footer .footer-plaform .footer-plaform-list a:hover{
+    text-decoration: none;
+}
+footer .footer-end{
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    height: 2.6rem;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--nav-a-hover-);
+}
+/* responsive */
+@media (max-width:992px) {
+    header .logo{
+        padding:0 2rem;
+    }
+    header .logo a{
+        font-size: 2.2rem;
+    }
+    header nav{
+        padding: 0 2rem;
+    }
+    header .nav a{
+        font-size: 1.6rem;
+    }
+}
+@media(max-width:768px){
+    header{
+        position: relative;
+    }
+    header .nav{
+    position: absolute;
+    flex-direction: column;
+    top: 80%;
+    margin: 1.5rem 0rem;
+    display: none;
+    width: 30rem;
+    background-color: var(--white-color-);
+    }
+    header .nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    header .nav ul li a{
+        border-bottom: var(--border);
+    }
+    header .nav ul li a:last-child{
+        border-bottom: none;
+    }
+    header .nav.active{
+        display: block;
+    }
+    header #menu-btn{
+        display: block;
+    }
+    .background-image .content h1{
+        font-size: 3rem;
+    }
+}
+
+
